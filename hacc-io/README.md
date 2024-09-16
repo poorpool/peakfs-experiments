@@ -20,8 +20,8 @@ The first argument to HACC-IO is the number of particles. A checkpoint file cons
 
 ```bash
 ./beegfs_run.sh
-./maplefs_run.sh
-./mcatfs_run.sh
+./gekkofs_run.sh
+./peakfs_run.sh
 ```
 
 There are 32768000 particles per process, 36 test processes on the client node.

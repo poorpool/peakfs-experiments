@@ -41,3 +41,7 @@ To test the mixed metadata performance of a parallel file system like BeeGFS, si
 ### Checkpoint/restart workloads: HACC-IO
 
 [HACC-IO](ttps://asc.llnl.gov/coral-benchmarks) is the I/O kernel of the cosmology N-body simulation application HACC. It simulates the process of saving and loading particle information between HACC's computing stages, i.e., check-point/restart workloads. The modified source code, configurations, and scripts can be found in `hacc-io/`.
+
+### Matrix saving/loading workloads: MADbench2
+
+[MADbench2](https://crd.lbl.gov/divisions/scidata/c3/c3-research/madbench2/) is an I/O kernel derived from a cosmic microwave background data analysis application. It simulates the process of exchanging data between processes through matrix saving/loading and uses busy-work instead of real computations, focusing on HPC application I/O behavior while maintaining application complexity. The modified source code, configurations, and scripts can be found in `madbench2/`.
