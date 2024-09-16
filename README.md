@@ -26,7 +26,7 @@
 
 Due to confidentiality requirements of our paper collaborators, we regret that we cannot publish the code of PeakFS and our own implementation of GekkoFS. However, we are pleased to show the configurations and scripts we used in `mdtest_and_ior_config/` during testing for reference. We adjust the data volume in the configuration to ensure that the tests run for a minimum duration (e.g., 40 seconds). 
 
-To test the metadata and data performance of a parallel file system like BeeGFS, simply run `./beegfs_io500.sh config-beegfs.ini`.
+To test the metadata and data performance of a parallel file system like BeeGFS, simply clone the [IO500 repository](https://github.com/IO500/io500), compile it, modify the paths in `beegfs_io500.sh` and `config-beegfs.ini`, then run `./beegfs_io500.sh config-beegfs.ini`.
 
 ## Comprehensive Experiments
 
@@ -36,8 +36,8 @@ md-workbench generates a semi-synchronous metadata-intensive workload that was d
 
 The configurations and scripts are in `md-workbench_config/`, corresponding to Fig.17 in the PeakFS paper. We adjust the data volume of mdtest-easy to ensure that the second stage of md-workbench runs for at least 30 seconds.
 
-To test the mixed metadata performance of a parallel file system like BeeGFS, simply run `./beegfs_mdwb.sh mdwb-beegfs.ini`.
+To test the mixed metadata performance of a parallel file system like BeeGFS, simply clone the [IO500 repository](https://github.com/IO500/io500), compile it, modify the paths in `beegfs_mdwb.sh` and `mdwb-beegfs.ini`, then run `./beegfs_mdwb.sh mdwb-beegfs.ini`. 
 
 ### Checkpoint/restart workloads: HACC-IO
 
-[HACC-IO](ttps://asc.llnl.gov/coral-benchmarks) is the I/O kernel of the cosmology N-body simulation application HACC. It simulates the process of saving and loading particle information between HACC's computing stages, i.e., check-point/restart workloads. The source code, configurations, and scripts can be found in `hacc-io`.
+[HACC-IO](ttps://asc.llnl.gov/coral-benchmarks) is the I/O kernel of the cosmology N-body simulation application HACC. It simulates the process of saving and loading particle information between HACC's computing stages, i.e., check-point/restart workloads. The modified source code, configurations, and scripts can be found in `hacc-io/`.
